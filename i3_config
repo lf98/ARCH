@@ -22,6 +22,8 @@ font pango:monospace 8
 # The combination of xss-lock, nm-applet and pactl is a popular choice, so
 # they are included here as an example. Modify as you see fit.
 
+
+default_border pixel 0
 # xss-lock grabs a logind suspend inhibit lock and will use i3lock to lock the
 # screen before suspend. Use loginctl lock-session to lock your screen.
 exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
@@ -41,25 +43,24 @@ bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOU
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec termite
+#I use konsole for my terminal and run it with this command to hide the menubar
+#change this to terminal of choice
+bindsym $mod+Return exec konsole --hide-menubar
 
 # kill focused window
 bindsym $mod+Shift+q kill
 
 
 ############
-#this is all the shit I added
+#display background at startup
 exec --no-startup-id feh --bg-fill ~/background.jpg
 #reset monitor positions
-exec xrandr --output HDMI-1 --auto --output DVI-D-1 --auto --left-of HDMI-1
+#exec xrandr --output HDMI-1 --auto --output DVI-D-1 --auto --left-of HDMI-1
 #disable screen timeout
 exec xset-dpms
 exec xset s off
-#test firefox keybind
+#keybind for firefox
 bindsym Mod1+z exec firefox
-#execute polybar at startup
-
-#exec_always --no-startup-id ~/.config/polybar/launch.sh
 ###########
 
 
@@ -197,5 +198,7 @@ bindsym $mod+r mode "resize"
 #        status_command i3status	
 #}
 
+#run polybar instead of the default i3_status bar
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
+
 
