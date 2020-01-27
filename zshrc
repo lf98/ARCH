@@ -22,6 +22,11 @@ function gc () {
 	git clone https://github.com/LucasFaletra/$1
 }
 
+gc_general () {
+	git clone https://github.com/$1
+}
+
+alias p='sudo pacman -Syu'
 alias ls='ls --color=auto'
 alias diff='diff --color=auto'
 alias grep='grep --color=auto'
