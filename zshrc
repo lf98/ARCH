@@ -11,11 +11,15 @@ autoload -Uz compinit
 compinit
 
 #function for quick git commit
-#
 function gq () {
 	git add .
 	git commit -m $1
 	git push origin master
+}
+
+#function for quick git clone from my repository
+function gc () {
+	git clone https://github.com/LucasFaletra/$1
 }
 
 alias ls='ls --color=auto'
