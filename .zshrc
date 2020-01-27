@@ -11,6 +11,7 @@ autoload -Uz compinit
 compinit
 
 #function for quick git commit
+#
 function gq () {
 	git add .
 	git commit -m $1
