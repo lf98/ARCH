@@ -26,11 +26,13 @@ gc_general () {
 	git clone https://github.com/$1
 }
 
-alias p='sudo pacman -Syu'
+alias pi='sudo pacman -S'
+alias pr='sudo pacman -R'
+alias pu='sudo pacman -Syu'
 alias ls='ls --color=auto'
 alias diff='diff --color=auto'
 alias grep='grep --color=auto'
-alias vi='sudo nvim'
+alias vim='sudo nvim'
 alias assembly='jp2a ~/Desktop/byung.jpg'
 PS1='%F{blue}%n%f@%F{cyan}%m%f %F{green}%B%~%b%f %# '
 
