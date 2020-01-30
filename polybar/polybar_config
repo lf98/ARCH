@@ -43,7 +43,7 @@ modules-right = eth filesystem cpu memory
 type = internal/date
 date = %m/%d/%Y
 
-
+date-alt = %H:%M
 
 [module/memory]
 type = internal/memory
