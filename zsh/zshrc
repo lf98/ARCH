@@ -28,7 +28,7 @@ gc_general () {
 
 alias pi='sudo pacman -S'
 alias pr='sudo pacman -R'
-alias pu='sudo pacman -Syu'
+alias pu='yes | sudo pacman -Syu'
 alias ls='ls --color=auto'
 alias diff='diff --color=auto'
 alias grep='grep --color=auto'
