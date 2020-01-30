@@ -1,2 +1,4 @@
 polybar
 siji-git
+tty-clock
+xorg-server-xdmx
