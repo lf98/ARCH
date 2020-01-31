@@ -26,6 +26,11 @@ gc_general () {
 	git clone https://github.com/$1
 }
 
+function pshow() {
+	pacman -Qi | awk 'BEGIN{sort="sort -k2 -n"} /Name/ {name=$3} /Size/ {size=$4/1024;print name":",size,"Mb"|sort}'
+}
+
+alias pc='sudo paccache --remove'
 alias pi='sudo pacman -S'
 alias pr='sudo pacman -R'
 alias pu='yes | sudo pacman -Syu'
