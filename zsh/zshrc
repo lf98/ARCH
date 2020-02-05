@@ -22,23 +22,60 @@ function gc () {
 	git clone https://github.com/LucasFaletra/$1
 }
 
+#function for a shortcut for cloning given repo
 gc_general () {
 	git clone https://github.com/$1
 }
 
+
+#function for updating package list and foreign package list
+function pkgs () {
+	pacman -Qeq > ~/ARCH/packages/package_list.txt
+	pacman -Qmq > ~/ARCH/packages/AUR_packages.txt
+}
+
+#function for showing all packages and their corresponfing sizes
 function pshow() {
 	pacman -Qi | awk 'BEGIN{sort="sort -k2 -n"} /Name/ {name=$3} /Size/ {size=$4/1024;print name":",size,"Mb"|sort}'
 }
 
+#function for copying files to ARCH git repo
+function ARCH_repo () {
+	cp ~/background.jpg ~/ARCH/display/background.jpg
+	cp ~/.config/i3/config ~/ARCH/display/i3_config
+	cp ~/.xinitrc ~/ARCH/display/xinitrc
+	pkgs
+	cp ~/.config/polybar/launch.sh ~/ARCH/polybar/install.sh
+	cp ~/.config/polybar/config ~/ARCH/polybar/polybar_config
+	cp ~/.zshrc ~/ARCH/zsh/zshrc
+}
+
+
+#clean up the cache
 alias pc='sudo paccache --remove'
+
+#shortcut for installing package
 alias pi='sudo pacman -S'
+
+#shortcut for removing package
 alias pr='sudo pacman -R'
+
+#shortcut for update
 alias pu='yes | sudo pacman -Syu'
+
+
+#add color to basic linux commands
 alias ls='ls --color=auto'
 alias diff='diff --color=auto'
 alias grep='grep --color=auto'
+
+
 alias vim='sudo nvim'
+
+
 alias assembly='jp2a ~/Desktop/byung.jpg'
+
+#prompt for user
 PS1='%F{blue}%n%f@%F{cyan}%m%f %F{green}%B%~%b%f %# '
 
 # End of lines added by compinstall

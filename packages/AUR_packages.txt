@@ -1,4 +1,8 @@
+i3lock-fancy-git
 polybar
 siji-git
+spotify-tui
 tty-clock
+vim-plug
 xorg-server-xdmx
+yay
