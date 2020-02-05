@@ -70,10 +70,7 @@ alias diff='diff --color=auto'
 alias grep='grep --color=auto'
 
 
-alias vim='sudo nvim'
 
-
-alias assembly='jp2a ~/Desktop/byung.jpg'
 
 #prompt for user
 PS1='%F{blue}%n%f@%F{cyan}%m%f %F{green}%B%~%b%f %# '
