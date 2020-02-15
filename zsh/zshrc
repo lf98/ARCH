@@ -51,6 +51,12 @@ function ARCH_repo () {
 }
 
 
+#start spotifyd in background with spt
+alias spot='spotifyd && spt'
+
+#I'm too lazy to type the whole thing
+alias shut='shutdown now'
+
 #clean up the cache
 alias pc='sudo paccache --remove'
 
@@ -70,9 +76,9 @@ alias diff='diff --color=auto'
 alias grep='grep --color=auto'
 
 
-
+alias vim='sudo nvim'
 
 #prompt for user
-PS1='%F{blue}%n%f@%F{cyan}%m%f %F{green}%B%~%b%f %# '
+PS1='%F{cyan}%n%f@%F{blue}%m%f %F{green}%B%~%b%f Ꝥ '
 
 # End of lines added by compinstall

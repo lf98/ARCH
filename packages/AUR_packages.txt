@@ -1,8 +1,10 @@
+aic94xx-firmware
+cordless-git
 i3lock-fancy-git
 polybar
 siji-git
 spotify-tui
-tty-clock
-vim-plug
-xorg-server-xdmx
+spotifyd
+wd719x-firmware
+xcursor-alkano-default
 yay

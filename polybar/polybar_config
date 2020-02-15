@@ -10,6 +10,7 @@ secondary = #e60053
 alert = #bd2c40
 
 [bar/mybar]
+monitor = ${env:MONITOR:HDMI-1}
 
 background = ${colors.background}
 foreground = ${colors.foreground}
@@ -34,7 +35,7 @@ font-2 = siji:pixelsize=10;1
 
 modules-left = i3
 modules-center = date
-modules-right = eth filesystem cpu memory battery
+modules-right = eth filesystem cpu memory
 
 
 
@@ -43,24 +44,6 @@ type = internal/date
 date = %m/%d/%Y
 
 date-alt = %H:%M
-
-
-;specifuc battery module for laptop
-[module/battery]
-type = internal/battery
-battery = BAT0
-
-
-format-charging-underline = #55aa55
-format-charging = <label-charging>
-
-format-discharging-underline = #ff0000
-format-discharging = <label-discharging>
-
-
-label-charging = Charging %percentage%%
-label-discharging = Discharging %percentage%%
-
 
 [module/memory]
 type = internal/memory
@@ -72,7 +55,7 @@ label = %percentage_used%%
 
 [module/eth]
 type = internal/network
-interface = wlp3s0
+interface = enp37s0
 interval = 3.0
 
 format-connected-underline = #55aa55
