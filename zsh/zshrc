@@ -94,21 +94,22 @@ magenta="$(printf '\033[0;35m')"
 green="$(printf '\033[0;32m')"
 cyan="$(printf '\033[0;34m')"
 
-clrpy() {
+function clrpy() {
         python $@ 2>&1 | sed -e "s/Traceback/${boldyellowonblue}&${norm}/g" \
         -e "s/File \".*\.py\".*$/${boldyellow}&${norm}/g" \
-        -e "s/\, line [[:digit:]]\+/${boldred}&${norm}/g" \
-	-e "s/NameError:/${boldred}&${norm}/g" \
-	-e "s/RuntimeError:/${boldred}&${norm}/g" \
+        -e "s/\, line [[:digit:]]\+/${red}&${norm}/g" \
+	-e "s/NameError:/${red}&${norm}/g" \
+	-e "s/RuntimeError:/${red}&${norm}/g" \
 	-e "s/SyntaxError:/${magenta}&${norm}/g" \
 	-e "s/IndexError:/${magenta}&${norm}/g" \
 	-e "s/ModuleNotFoundError:/${green}&${norm}/g" \
 	-e "s/ImportError:/${green}&${norm}/g" \
-	-e "s/StopIteration:/${boldred}&${norm}/g" \
-	-e "s/TypeError:/${boldred}&${norm}/g" \
-	-e "s/ValueError:/${boldred}&${norm}/g" \
-	-e "s/ZeroDivisionError:/${boldred}&${norm}/g" \
-	-e "s/KeyboardInterrupt:/${cyan}&${nomr}/g"
+	-e "s/StopIteration:/${red}&${norm}/g" \
+	-e "s/TypeError:/${red}&${norm}/g" \
+	-e "s/ValueError:/${red}&${norm}/g" \
+	-e "s/ZeroDivisionError:/${red}&${norm}/g" \
+	-e "s/KeyboardInterrupt:/${cyan}&${norm}/g" \
+	-e "s/AttributeError:/${magenta}&${norm}/g"
 
 	
 
