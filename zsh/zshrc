@@ -57,7 +57,7 @@ alias spot='spotifyd && spt'
 #I'm too lazy to type the whole thing
 alias shut='shutdown now'
 
-#clean up the cache
+#clean up the cache for pacman
 alias pc='sudo paccache --remove'
 
 #shortcut for installing package

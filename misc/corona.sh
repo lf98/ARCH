@@ -1,9 +1,6 @@
 #!/bin/sh
 
-
-#I based this off of Luke Smith's video
-#I am not very original
-
+#this short script obtains the latest corona virus data, selects certain parts, then writes the info to a file for use in polybar
 
 #update info
 curl https://corona-stats.online/US > ~/.cache/corona

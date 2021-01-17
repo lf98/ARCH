@@ -1,10 +1,13 @@
 aic94xx-firmware
 cordless-git
 i3lock-fancy-git
+js60
 polybar
 siji-git
 spotify-tui
-spotifyd
+transset-df
 wd719x-firmware
 xcursor-alkano-default
+xorg-font-utils
 yay
+zoom

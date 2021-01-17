@@ -1,9 +1,8 @@
 #!/bin/bash
 #this is going to be a shell script to install everything and quickly reconfigure my operating system
-#there is nothing here at the moment but I plan on creating this in the future.
-#for now this useless shell script file is all thats in this directory
 
-
+#so far this script just quickly installs the packages I have stored in a txt file and configures some cosmetic things
+#this script also changes the shell to zsh so be aware of that
 
 
 #install all the packages from the package list file
