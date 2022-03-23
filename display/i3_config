@@ -49,7 +49,7 @@ bindsym $mod+Shift+q kill
 
 
 ############
-#this is all the shit I added
+#this is some of the stuff I added
 exec --no-startup-id feh --bg-fill ~/background.jpg
 #reset monitor positions
 exec xrandr --output HDMI-1 --auto --output DVI-D-1 --auto --left-of HDMI-1
